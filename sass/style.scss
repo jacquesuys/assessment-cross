@@ -21,20 +21,89 @@ body {
 
 .container {
   @include container(960px);
-  border: solid 1px red;
+  background-color: #F6F9FC;
+  padding: 5px;
 }
 
-.col {
-  @include span(1 of 8);
 
-  &:last-child {
-    margin: 0;
+.row {
+  @include clearfix;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  background-color: #FBFCFE;
+  text-align: center;
+  font-size: 0.875rem;
+  margin-bottom: 10px;
+  padding: 5px;
+
+  .heading {
+    @include span(1 of 8);
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  .col {
+    @include span(1 of 8);
+    white-space: nowrap;
+
+    &:nth-child(5),
+    &:nth-child(6),
+    &:nth-child(7),
+    &:nth-child(8), 
+    &:nth-child(9) {
+      border: solid 1px #CACBCB;
+    }
+
+    // TODO add nth-child selectors might change to classes dep browser requirements
+    &:nth-child(8) {
+      margin: 0;
+    }
+
+    &:nth-child(9) {
+      display: none;
+    }
+  }
+
+  &.active {
+    .col:nth-child(5) {
+      clear: both;
+    }
+
+    .col {
+      &:nth-child(5),
+      &:nth-child(6),
+      &:nth-child(7),
+      &:nth-child(8),
+      &:nth-child(9) {
+        @include span(1 of 5);
+      }
+    }
+
+    .col:nth-child(9) {
+      display: block;
+      margin: 0;
+    }
   }
 }
 
-.heading {
-  background-color: #F6F9FC;
-  text-align: center;
-  font-size: 0.875rem;
-  @include clearfix;
+// states
+.pending {
+  border-color: #CACBCB;
+}
+
+.running {
+  border-color: #4C85B7;
+}
+
+.rejected {
+  border-color: #BB0008;
+  background-color: #FDEEEE;
+}
+
+.accepted {
+  border-color: #669945;
+  background-color: #FBFDFC;
 }

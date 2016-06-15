@@ -11,26 +11,65 @@ body {
   max-width: 960px;
   margin-left: auto;
   margin-right: auto;
-  border: solid 1px red; }
+  background-color: #F6F9FC;
+  padding: 5px; }
   .container:after {
     content: " ";
     display: block;
     clear: both; }
 
-.col {
-  width: 10.25641%;
-  float: left;
-  margin-right: 2.5641%; }
-  .col:last-child {
-    margin: 0; }
-
-.heading {
-  background-color: #F6F9FC;
+.row {
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  background-color: #FBFCFE;
   text-align: center;
-  font-size: 0.875rem; }
-  .heading:after {
+  font-size: 0.875rem;
+  margin-bottom: 10px;
+  padding: 5px; }
+  .row:after {
     content: "";
     display: table;
     clear: both; }
+  .row .heading {
+    width: 10.25641%;
+    float: left;
+    margin-right: 2.5641%; }
+    .row .heading:last-child {
+      margin: 0; }
+  .row .col {
+    width: 10.25641%;
+    float: left;
+    margin-right: 2.5641%;
+    white-space: nowrap; }
+    .row .col:nth-child(5), .row .col:nth-child(6), .row .col:nth-child(7), .row .col:nth-child(8), .row .col:nth-child(9) {
+      border: solid 1px #CACBCB; }
+    .row .col:nth-child(8) {
+      margin: 0; }
+    .row .col:nth-child(9) {
+      display: none; }
+  .row.active .col:nth-child(5) {
+    clear: both; }
+  .row.active .col:nth-child(5), .row.active .col:nth-child(6), .row.active .col:nth-child(7), .row.active .col:nth-child(8), .row.active .col:nth-child(9) {
+    width: 16.66667%;
+    float: left;
+    margin-right: 4.16667%; }
+  .row.active .col:nth-child(9) {
+    display: block;
+    margin: 0; }
+
+.pending {
+  border-color: #CACBCB; }
+
+.running {
+  border-color: #4C85B7; }
+
+.rejected {
+  border-color: #BB0008;
+  background-color: #FDEEEE; }
+
+.accepted {
+  border-color: #669945;
+  background-color: #FBFDFC; }
 
 /*# sourceMappingURL=style.css.map */

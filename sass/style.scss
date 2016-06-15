@@ -6,6 +6,7 @@
   box-sizing: border-box; 
 }
 
+// sass converts all hex to rgba if passed as param
 $gray: #CACBCB;
 $blue: #4C85B7;
 $red: #BB0008;
@@ -75,15 +76,21 @@ body {
     @for $i from 5 through 9 {
       &:nth-child(#{$i}) {
         border: solid 1px #CACBCB;
+        background-color: #D8D8D8;
 
         .bar {
           display: block;
           height: 20px;
-          background-color: #D8D8D8;
         }
 
         .content {
           display: none;
+        }
+
+        .content,
+        .bar {
+          border-width: 1px;
+          border-style: solid;
         }
       }
     }
@@ -132,19 +139,36 @@ body {
 
 .running {
   @include status($blue, lighten($blue, 50%));
+
+  .content,
+  .bar {
+    border-color: $blue;
+  }
 }
 
 .rejected {
   @include status($red, lighten($red, 50%));
+
+  .content,
+  .bar {
+    border-color: $red;
+  }
 }
 
 .accepted {
   @include status($green, lighten($green, 50%));
+
+  .content,
+  .bar {
+    border-color: $green;
+  }
 }
 
 // progress bars
+// make this BEM
 .run {
   background-color: $blue;
+  // will need transitions
 }
 
 .pass {

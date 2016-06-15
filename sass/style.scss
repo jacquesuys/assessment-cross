@@ -6,11 +6,29 @@
   box-sizing: border-box; 
 }
 
+$gray: #CACBCB;
+$blue: #4C85B7;
+$red: #BB0008;
+$green: #669945;
+
 @mixin clearfix {
   &:after {
     content: "";
     display: table;
     clear: both;
+  }
+}
+
+@mixin status($color, $background: false) {
+  color: rgba($color, 1);
+  border-color: rgba($color, 1);
+
+  @if $background != false {
+    // this can become a mixin
+    background: -moz-linear-gradient(left, rgba($background, 1) 0%, rgba($background, 0) 100%);
+    background: -webkit-linear-gradient(left, rgba($background, 1) 0%, rgba($background, 0) 100%);
+    background: linear-gradient(to right, rgba($background, 1) 0%, rgba($background, 0) 100%);
+    // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 );
   }
 }
 
@@ -25,7 +43,6 @@ body {
   padding: 5px;
 }
 
-
 .row {
   @include clearfix;
   border-width: 1px;
@@ -33,7 +50,7 @@ body {
   border-color: transparent;
   background-color: #FBFCFE;
   text-align: center;
-  font-size: 0.875rem;
+  font-size: 0.875rem; // 14 / 16
   margin-bottom: 10px;
   padding: 5px;
 
@@ -48,16 +65,26 @@ body {
   .col {
     @include span(1 of 8);
     white-space: nowrap;
+    overflow: hidden;
 
-    &:nth-child(5),
-    &:nth-child(6),
-    &:nth-child(7),
-    &:nth-child(8), 
-    &:nth-child(9) {
-      border: solid 1px #CACBCB;
+    // TODO add nth-child selectors might change 
+    // to classes dep browser requirements
+    @for $i from 5 through 9 {
+      &:nth-child(#{$i}) {
+        border: solid 1px #CACBCB;
+
+        .bar {
+          display: block;
+          height: 20px;
+          background-color: #D8D8D8;
+        }
+
+        .content {
+          display: none;
+        }
+      }
     }
 
-    // TODO add nth-child selectors might change to classes dep browser requirements
     &:nth-child(8) {
       margin: 0;
     }
@@ -73,12 +100,18 @@ body {
     }
 
     .col {
-      &:nth-child(5),
-      &:nth-child(6),
-      &:nth-child(7),
-      &:nth-child(8),
-      &:nth-child(9) {
-        @include span(1 of 5);
+      @for $i from 5 through 9 {
+        &:nth-child(#{$i}) {
+          @include span(1 of 5);
+
+          .bar {
+            display: none;
+          }
+
+          .content {
+            display: block;
+          }
+        }
       }
     }
 
@@ -91,19 +124,31 @@ body {
 
 // states
 .pending {
-  border-color: #CACBCB;
+  @include status($gray);
 }
 
 .running {
-  border-color: #4C85B7;
+  @include status($blue, lighten($blue, 50%));
 }
 
 .rejected {
-  border-color: #BB0008;
-  background-color: #FDEEEE;
+  @include status($red, lighten($red, 50%));
 }
 
 .accepted {
-  border-color: #669945;
-  background-color: #FBFDFC;
+  @include status($green, lighten($green, 50%));
 }
+
+// progress bars
+.run {
+  background-color: $blue;
+}
+
+.pass {
+  background-color: $green;
+}
+
+.fail {
+  background-color: $red;
+}
+

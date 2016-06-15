@@ -19,16 +19,19 @@ $green: #669945;
   }
 }
 
+@mixin gradient($color, $opacity: 1, $stop: 100%) {
+  background: -moz-linear-gradient(left, rgba($color, $opacity) 0%, rgba($color, 0) $stop);
+  background: -webkit-linear-gradient(left, rgba($color, $opacity) 0%, rgba($color, 0) $stop);
+  background: linear-gradient(to right, rgba($color, $opacity) 0%, rgba($color, 0) $stop);
+  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 );
+}
+
 @mixin status($color, $background: false) {
   color: rgba($color, 1);
   border-color: rgba($color, 1);
 
   @if $background != false {
-    // this can become a mixin
-    background: -moz-linear-gradient(left, rgba($background, 1) 0%, rgba($background, 0) 100%);
-    background: -webkit-linear-gradient(left, rgba($background, 1) 0%, rgba($background, 0) 100%);
-    background: linear-gradient(to right, rgba($background, 1) 0%, rgba($background, 0) 100%);
-    // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 );
+    @include gradient($background);
   }
 }
 

@@ -1,0 +1,14 @@
+{
+  "name": "crossover",
+  "version": "1.0.0",
+  "description": "An assessment for the Senior Front End Developer role",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "crossover"
+  ],
+  "author": "Jacques Uys",
+  "license": "ISC"
+}

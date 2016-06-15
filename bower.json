@@ -1,0 +1,24 @@
+{
+  "name": "crossover",
+  "description": "An assessment for the Senior Front End Developer role",
+  "main": "index.js",
+  "authors": [
+    "Jacques Uys"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "crossover"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "susy": "^2.2.12"
+  }
+}

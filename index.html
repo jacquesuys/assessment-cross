@@ -18,11 +18,11 @@
         <div class="heading">Functional Test</div>
       </div>
 
-      <div ng-repeat="test in tests" class="row {{ test.state | lowercase }}">
-        <div class="col">{{ test.name ||  "&nbsp;" }}</div>
+      <div ng-repeat="test in tests track by $index" class="row {{ $index === isOpen ? 'active' : ''  }} {{ test.state | lowercase }}" ng-click="toggle($index)">
+        <div class="col">{{ test.type }} {{ test.name || "&nbsp;" }}</div>
         <div class="col">{{ test.owner || "&nbsp;" }}</div>
         <div class="col">{{ test.date }} {{ test.time || "&nbsp;" }}</div>
-        <div class="col">{{ test.state ||  "&nbsp;" }}</div>
+        <div class="col">{{ test.state || "&nbsp;" }}</div>
         <!-- TODO maybe make these 4 into directives -->
         <div class="col">
           <div class="bar {{ test.metrics.status }}"></div>

@@ -48,7 +48,8 @@ body {
       background-color: #D8D8D8; }
       .row .col:nth-child(5) .bar {
         display: block;
-        height: 20px; }
+        height: 20px;
+        border-color: #D8D8D8; }
       .row .col:nth-child(5) .content {
         display: none; }
       .row .col:nth-child(5) .content,
@@ -60,7 +61,8 @@ body {
       background-color: #D8D8D8; }
       .row .col:nth-child(6) .bar {
         display: block;
-        height: 20px; }
+        height: 20px;
+        border-color: #D8D8D8; }
       .row .col:nth-child(6) .content {
         display: none; }
       .row .col:nth-child(6) .content,
@@ -72,7 +74,8 @@ body {
       background-color: #D8D8D8; }
       .row .col:nth-child(7) .bar {
         display: block;
-        height: 20px; }
+        height: 20px;
+        border-color: #D8D8D8; }
       .row .col:nth-child(7) .content {
         display: none; }
       .row .col:nth-child(7) .content,
@@ -84,7 +87,8 @@ body {
       background-color: #D8D8D8; }
       .row .col:nth-child(8) .bar {
         display: block;
-        height: 20px; }
+        height: 20px;
+        border-color: #D8D8D8; }
       .row .col:nth-child(8) .content {
         display: none; }
       .row .col:nth-child(8) .content,
@@ -96,7 +100,8 @@ body {
       background-color: #D8D8D8; }
       .row .col:nth-child(9) .bar {
         display: block;
-        height: 20px; }
+        height: 20px;
+        border-color: #D8D8D8; }
       .row .col:nth-child(9) .content {
         display: none; }
       .row .col:nth-child(9) .content,
@@ -208,8 +213,7 @@ body {
   background: -moz-linear-gradient(left, #cbdcea 0%, rgba(203, 220, 234, 0) 50%);
   background: -webkit-linear-gradient(left, #cbdcea 0%, rgba(203, 220, 234, 0) 50%);
   background: linear-gradient(to right, #cbdcea 0%, rgba(203, 220, 234, 0) 50%); }
-  .running .content,
-  .running .bar {
+  .running .content {
     border-color: #4C85B7; }
 
 .rejected {
@@ -218,8 +222,7 @@ body {
   background: -moz-linear-gradient(left, #ffeeef 0%, rgba(255, 238, 239, 0) 50%);
   background: -webkit-linear-gradient(left, #ffeeef 0%, rgba(255, 238, 239, 0) 50%);
   background: linear-gradient(to right, #ffeeef 0%, rgba(255, 238, 239, 0) 50%); }
-  .rejected .content,
-  .rejected .bar {
+  .rejected .content {
     border-color: #BB0008; }
 
 .complete,
@@ -230,9 +233,7 @@ body {
   background: -webkit-linear-gradient(left, #edf5e8 0%, rgba(237, 245, 232, 0) 50%);
   background: linear-gradient(to right, #edf5e8 0%, rgba(237, 245, 232, 0) 50%); }
   .complete .content,
-  .complete .bar,
-  .accepted .content,
-  .accepted .bar {
+  .accepted .content {
     border-color: #669945; }
 
 .run {

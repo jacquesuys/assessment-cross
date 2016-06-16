@@ -7,7 +7,8 @@
 }
 
 // sass converts all hex to rgba if passed as param
-$gray: #CACBCB;
+$light-gray: #CACBCB;
+$gray: #D8D8D8;
 $blue: #4C85B7;
 $red: #BB0008;
 $green: #669945;
@@ -75,11 +76,12 @@ body {
     @for $i from 5 through 9 {
       &:nth-child(#{$i}) {
         border: solid 1px #CACBCB;
-        background-color: #D8D8D8;
+        background-color: $gray;
 
         .bar {
           display: block;
           height: 20px;
+          border-color: $gray;
         }
 
         .content {
@@ -141,14 +143,13 @@ body {
 
 // states
 .pending {
-  @include status($gray);
+  @include status($light-gray);
 }
 
 .running {
   @include status($blue, lighten($blue, 35%));
 
-  .content,
-  .bar {
+  .content {
     border-color: $blue;
   }
 }
@@ -156,8 +157,7 @@ body {
 .rejected {
   @include status($red, lighten($red, 60%));
 
-  .content,
-  .bar {
+  .content {
     border-color: $red;
   }
 }
@@ -166,8 +166,7 @@ body {
 .accepted {
   @include status($green, lighten($green, 50%));
 
-  .content,
-  .bar {
+  .content {
     border-color: $green;
   }
 }

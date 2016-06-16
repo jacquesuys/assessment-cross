@@ -20,6 +20,6 @@
   ],
   "dependencies": {
     "susy": "^2.2.12",
-    "angular": "1.2"
+    "angular": "^1.5.7"
   }
 }

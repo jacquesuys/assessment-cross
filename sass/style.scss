@@ -63,11 +63,24 @@ body {
   }
 }
 
+svg {
+  background: orange;
+  border-radius: 50%;
+}
+
+circle {
+  fill: orange;
+  stroke: yellowgreen;
+  stroke-width: 50;
+}
+
 .coverage {
   position: relative;
   background-color: rgba(orange, 0.75);
   line-height: 14 / 16 * 1rem;
   color: #000;
+  width: 95%;
+  margin: 0 2.5%;
 
   > span {
     z-index: 1;
@@ -80,12 +93,13 @@ body {
   height: 28px;
   top: 0;
   left: 0;
+  right: 0;
   background-color: rgba(green, 0.75);
 }
 
 .lightbox {
   display: none;
-  
+
   &.active {
     display: block;
   }
@@ -168,6 +182,7 @@ body {
 
           .content {
             display: block;
+            padding: 5px;
             @include clearfix;
 
             h3 {

@@ -31,11 +31,22 @@ body {
     clear: right;
     margin-right: 0; }
 
+svg {
+  background: orange;
+  border-radius: 50%; }
+
+circle {
+  fill: orange;
+  stroke: yellowgreen;
+  stroke-width: 50; }
+
 .coverage {
   position: relative;
   background-color: rgba(255, 165, 0, 0.75);
   line-height: 0.875rem;
-  color: #000; }
+  color: #000;
+  width: 95%;
+  margin: 0 2.5%; }
   .coverage > span {
     z-index: 1;
     position: relative; }
@@ -45,6 +56,7 @@ body {
   height: 28px;
   top: 0;
   left: 0;
+  right: 0;
   background-color: rgba(0, 128, 0, 0.75); }
 
 .lightbox {
@@ -158,7 +170,8 @@ body {
     .row.active .col:nth-child(5) .bar {
       display: none; }
     .row.active .col:nth-child(5) .content {
-      display: block; }
+      display: block;
+      padding: 5px; }
       .row.active .col:nth-child(5) .content:after {
         content: "";
         display: table;
@@ -175,7 +188,8 @@ body {
     .row.active .col:nth-child(6) .bar {
       display: none; }
     .row.active .col:nth-child(6) .content {
-      display: block; }
+      display: block;
+      padding: 5px; }
       .row.active .col:nth-child(6) .content:after {
         content: "";
         display: table;
@@ -192,7 +206,8 @@ body {
     .row.active .col:nth-child(7) .bar {
       display: none; }
     .row.active .col:nth-child(7) .content {
-      display: block; }
+      display: block;
+      padding: 5px; }
       .row.active .col:nth-child(7) .content:after {
         content: "";
         display: table;
@@ -209,7 +224,8 @@ body {
     .row.active .col:nth-child(8) .bar {
       display: none; }
     .row.active .col:nth-child(8) .content {
-      display: block; }
+      display: block;
+      padding: 5px; }
       .row.active .col:nth-child(8) .content:after {
         content: "";
         display: table;
@@ -226,7 +242,8 @@ body {
     .row.active .col:nth-child(9) .bar {
       display: none; }
     .row.active .col:nth-child(9) .content {
-      display: block; }
+      display: block;
+      padding: 5px; }
       .row.active .col:nth-child(9) .content:after {
         content: "";
         display: table;

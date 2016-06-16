@@ -42,7 +42,8 @@ body {
     float: left;
     margin-right: 2.5641%;
     white-space: nowrap;
-    overflow: hidden; }
+    overflow: hidden;
+    line-height: 1.25rem; }
     .row .col:nth-child(5) {
       border: solid 1px #CACBCB;
       background-color: #D8D8D8; }
@@ -112,43 +113,88 @@ body {
   .row.active .col:nth-child(5) {
     width: 16.66667%;
     float: left;
-    margin-right: 4.16667%; }
+    margin-right: 4.16667%;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+    background-color: transparent; }
     .row.active .col:nth-child(5) .bar {
       display: none; }
     .row.active .col:nth-child(5) .content {
       display: block; }
+      .row.active .col:nth-child(5) .content:after {
+        content: "";
+        display: table;
+        clear: both; }
+      .row.active .col:nth-child(5) .content h3 {
+        float: left;
+        margin: 0; }
   .row.active .col:nth-child(6) {
     width: 16.66667%;
     float: left;
-    margin-right: 4.16667%; }
+    margin-right: 4.16667%;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+    background-color: transparent; }
     .row.active .col:nth-child(6) .bar {
       display: none; }
     .row.active .col:nth-child(6) .content {
       display: block; }
+      .row.active .col:nth-child(6) .content:after {
+        content: "";
+        display: table;
+        clear: both; }
+      .row.active .col:nth-child(6) .content h3 {
+        float: left;
+        margin: 0; }
   .row.active .col:nth-child(7) {
     width: 16.66667%;
     float: left;
-    margin-right: 4.16667%; }
+    margin-right: 4.16667%;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+    background-color: transparent; }
     .row.active .col:nth-child(7) .bar {
       display: none; }
     .row.active .col:nth-child(7) .content {
       display: block; }
+      .row.active .col:nth-child(7) .content:after {
+        content: "";
+        display: table;
+        clear: both; }
+      .row.active .col:nth-child(7) .content h3 {
+        float: left;
+        margin: 0; }
   .row.active .col:nth-child(8) {
     width: 16.66667%;
     float: left;
-    margin-right: 4.16667%; }
+    margin-right: 4.16667%;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+    background-color: transparent; }
     .row.active .col:nth-child(8) .bar {
       display: none; }
     .row.active .col:nth-child(8) .content {
       display: block; }
+      .row.active .col:nth-child(8) .content:after {
+        content: "";
+        display: table;
+        clear: both; }
+      .row.active .col:nth-child(8) .content h3 {
+        float: left;
+        margin: 0; }
   .row.active .col:nth-child(9) {
     width: 16.66667%;
     float: left;
-    margin-right: 4.16667%; }
+    margin-right: 4.16667%;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+    background-color: transparent; }
     .row.active .col:nth-child(9) .bar {
       display: none; }
     .row.active .col:nth-child(9) .content {
       display: block; }
+      .row.active .col:nth-child(9) .content:after {
+        content: "";
+        display: table;
+        clear: both; }
+      .row.active .col:nth-child(9) .content h3 {
+        float: left;
+        margin: 0; }
   .row.active .col:nth-child(9) {
     display: block;
     margin: 0; }
@@ -160,9 +206,9 @@ body {
 .running {
   color: #4c85b7;
   border-color: #4c85b7;
-  background: -moz-linear-gradient(left, white 0%, rgba(255, 255, 255, 0) 100%);
-  background: -webkit-linear-gradient(left, white 0%, rgba(255, 255, 255, 0) 100%);
-  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%); }
+  background: -moz-linear-gradient(left, #cbdcea 0%, rgba(203, 220, 234, 0) 100%);
+  background: -webkit-linear-gradient(left, #cbdcea 0%, rgba(203, 220, 234, 0) 100%);
+  background: linear-gradient(to right, #cbdcea 0%, rgba(203, 220, 234, 0) 100%); }
   .running .content,
   .running .bar {
     border-color: #4C85B7; }
@@ -170,9 +216,9 @@ body {
 .rejected {
   color: #bb0008;
   border-color: #bb0008;
-  background: -moz-linear-gradient(left, #ffbbbe 0%, rgba(255, 187, 190, 0) 100%);
-  background: -webkit-linear-gradient(left, #ffbbbe 0%, rgba(255, 187, 190, 0) 100%);
-  background: linear-gradient(to right, #ffbbbe 0%, rgba(255, 187, 190, 0) 100%); }
+  background: -moz-linear-gradient(left, #ffeeef 0%, rgba(255, 238, 239, 0) 100%);
+  background: -webkit-linear-gradient(left, #ffeeef 0%, rgba(255, 238, 239, 0) 100%);
+  background: linear-gradient(to right, #ffeeef 0%, rgba(255, 238, 239, 0) 100%); }
   .rejected .content,
   .rejected .bar {
     border-color: #BB0008; }

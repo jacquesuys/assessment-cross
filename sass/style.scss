@@ -32,7 +32,7 @@ $green: #669945;
   border-color: rgba($color, 1);
 
   @if $background != false {
-    @include gradient($background);
+    @include gradient($background, 1, 50%);
   }
 }
 
@@ -42,7 +42,7 @@ body {
 }
 
 .container {
-  @include container(960px);
+  @include container(80%);
   background-color: #F6F9FC;
   padding: 5px;
 }
@@ -164,6 +164,7 @@ body {
   }
 }
 
+.complete,
 .accepted {
   @include status($green, lighten($green, 50%));
 

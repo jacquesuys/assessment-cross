@@ -8,7 +8,7 @@ body {
   font-family: "Helvetica-Neue", Helvetica, Arial, sans-serif; }
 
 .container {
-  max-width: 960px;
+  max-width: 80%;
   margin-left: auto;
   margin-right: auto;
   background-color: #F6F9FC;
@@ -206,9 +206,9 @@ body {
 .running {
   color: #4c85b7;
   border-color: #4c85b7;
-  background: -moz-linear-gradient(left, #cbdcea 0%, rgba(203, 220, 234, 0) 100%);
-  background: -webkit-linear-gradient(left, #cbdcea 0%, rgba(203, 220, 234, 0) 100%);
-  background: linear-gradient(to right, #cbdcea 0%, rgba(203, 220, 234, 0) 100%); }
+  background: -moz-linear-gradient(left, #cbdcea 0%, rgba(203, 220, 234, 0) 50%);
+  background: -webkit-linear-gradient(left, #cbdcea 0%, rgba(203, 220, 234, 0) 50%);
+  background: linear-gradient(to right, #cbdcea 0%, rgba(203, 220, 234, 0) 50%); }
   .running .content,
   .running .bar {
     border-color: #4C85B7; }
@@ -216,19 +216,22 @@ body {
 .rejected {
   color: #bb0008;
   border-color: #bb0008;
-  background: -moz-linear-gradient(left, #ffeeef 0%, rgba(255, 238, 239, 0) 100%);
-  background: -webkit-linear-gradient(left, #ffeeef 0%, rgba(255, 238, 239, 0) 100%);
-  background: linear-gradient(to right, #ffeeef 0%, rgba(255, 238, 239, 0) 100%); }
+  background: -moz-linear-gradient(left, #ffeeef 0%, rgba(255, 238, 239, 0) 50%);
+  background: -webkit-linear-gradient(left, #ffeeef 0%, rgba(255, 238, 239, 0) 50%);
+  background: linear-gradient(to right, #ffeeef 0%, rgba(255, 238, 239, 0) 50%); }
   .rejected .content,
   .rejected .bar {
     border-color: #BB0008; }
 
+.complete,
 .accepted {
   color: #669945;
   border-color: #669945;
-  background: -moz-linear-gradient(left, #edf5e8 0%, rgba(237, 245, 232, 0) 100%);
-  background: -webkit-linear-gradient(left, #edf5e8 0%, rgba(237, 245, 232, 0) 100%);
-  background: linear-gradient(to right, #edf5e8 0%, rgba(237, 245, 232, 0) 100%); }
+  background: -moz-linear-gradient(left, #edf5e8 0%, rgba(237, 245, 232, 0) 50%);
+  background: -webkit-linear-gradient(left, #edf5e8 0%, rgba(237, 245, 232, 0) 50%);
+  background: linear-gradient(to right, #edf5e8 0%, rgba(237, 245, 232, 0) 50%); }
+  .complete .content,
+  .complete .bar,
   .accepted .content,
   .accepted .bar {
     border-color: #669945; }

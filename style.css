@@ -33,18 +33,24 @@ body {
 
 .coverage {
   position: relative;
-  background-color: #ffdb99;
-  line-height: 0.875rem; }
+  background-color: rgba(255, 165, 0, 0.75);
+  line-height: 0.875rem;
+  color: #000; }
   .coverage > span {
     z-index: 1;
     position: relative; }
 
 .progress {
   position: absolute;
-  height: 30px;
+  height: 28px;
   top: 0;
   left: 0;
-  background-color: #1aff1a; }
+  background-color: rgba(0, 128, 0, 0.75); }
+
+.lightbox {
+  display: none; }
+  .lightbox.active {
+    display: block; }
 
 .row {
   border-width: 1px;

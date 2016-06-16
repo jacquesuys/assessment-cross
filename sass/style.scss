@@ -65,8 +65,9 @@ body {
 
 .coverage {
   position: relative;
-  background-color: lighten(orange, 30%);
+  background-color: rgba(orange, 0.75);
   line-height: 14 / 16 * 1rem;
+  color: #000;
 
   > span {
     z-index: 1;
@@ -76,10 +77,18 @@ body {
 
 .progress {
   position: absolute;
-  height: 30px;
+  height: 28px;
   top: 0;
   left: 0;
-  background-color: lighten(green, 30%);
+  background-color: rgba(green, 0.75);
+}
+
+.lightbox {
+  display: none;
+  
+  &.active {
+    display: block;
+  }
 }
 
 .row {

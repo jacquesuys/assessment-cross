@@ -24,7 +24,7 @@
         <div class="col">{{ test.date }} {{ test.time || "&nbsp;" }}</div>
         <div class="col">{{ test.state || "&nbsp;" }}</div>
         <!-- TODO maybe make these 4 into directives -->
-        <div class="col">
+        <div class="col" ng-click="lightbox()">
           <div class="bar {{ test.metrics.status }}"></div>
           <div class="content">
             <h3>Metrics</h3>
@@ -34,7 +34,7 @@
               <div class="half">{{ test.metrics.workmanship }}<br/>Workmanship</div>
           </div>
         </div>
-        <div class="col">
+        <div class="col" ng-click="lightbox()">
           <div class="bar {{ test.build.status }}"></div>
           <div class="content">
             <h3>Build</h3>
@@ -43,7 +43,7 @@
             <div class="full">{{ test.build.time }} - {{ test.build.date }}</div>
           </div>
         </div>
-        <div class="col">
+        <div class="col" ng-click="lightbox()">
           <div class="bar {{ test['unit test'].status }}"></div>
           <div class="content">
             <h3>Unit Test</h3>
@@ -56,7 +56,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col" ng-click="lightbox()">
           <div class="bar {{ test['functional test'].status }}"></div>
           <div class="content">
             <h3>Functional Test</h3>
@@ -98,7 +98,9 @@
           </div>
         </div>
       </div>
-
+      <div class="lightbox {{ switch ? 'active' : ''  }}">
+        ligthbox
+      </div>
     </div>
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="main.js"></script>

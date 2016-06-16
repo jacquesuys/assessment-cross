@@ -12,9 +12,13 @@ angular.module('crossApp', [])
 
     // TODO setup a directive
     $scope.isOpen = '';
-
     $scope.toggle = function($index) {
       $scope.isOpen = $index;
     };
 
+    $scope.switch = false;
+    $scope.lightbox = function() {
+      $scope.switch = !$scope.switch;
+    };
+    
   });

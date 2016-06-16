@@ -48,16 +48,50 @@ body {
   padding: 5px;
 }
 
+.full {
+  float: left;
+  clear: both;
+  width: 100%;
+}
+
+.half {
+  @include span(1 of 2);
+
+  &:nth-child(odd) {
+    clear: right;
+    margin-right: 0;
+  }
+}
+
+.coverage {
+  position: relative;
+  background-color: lighten(orange, 30%);
+  line-height: 14 / 16 * 1rem;
+
+  > span {
+    z-index: 1;
+    position: relative;
+  } 
+}
+
+.progress {
+  position: absolute;
+  height: 30px;
+  top: 0;
+  left: 0;
+  background-color: lighten(green, 30%);
+}
+
 .row {
   @include clearfix;
   border-width: 1px;
   border-style: solid;
   border-color: transparent;
   background-color: #FBFCFE;
-  text-align: center;
-  font-size: 0.875rem; // 14 / 16
+  font-size: 14 / 16 * 1rem;
   margin-bottom: 10px;
   padding: 5px;
+  text-align: center;
 
   .heading {
     @include span(1 of 8);
@@ -78,6 +112,7 @@ body {
         border: solid 1px #CACBCB;
         background-color: $gray;
 
+        // TODO rework bar to with progress class
         .bar {
           display: block;
           height: 20px;
@@ -126,8 +161,8 @@ body {
             @include clearfix;
 
             h3 {
-              float: left;
               margin: 0;
+              text-align: left;
             }
           }
         }

@@ -18,15 +18,43 @@ body {
     display: block;
     clear: both; }
 
+.full {
+  float: left;
+  clear: both;
+  width: 100%; }
+
+.half {
+  width: 44.44444%;
+  float: left;
+  margin-right: 11.11111%; }
+  .half:nth-child(odd) {
+    clear: right;
+    margin-right: 0; }
+
+.coverage {
+  position: relative;
+  background-color: #ffdb99;
+  line-height: 0.875rem; }
+  .coverage > span {
+    z-index: 1;
+    position: relative; }
+
+.progress {
+  position: absolute;
+  height: 30px;
+  top: 0;
+  left: 0;
+  background-color: #1aff1a; }
+
 .row {
   border-width: 1px;
   border-style: solid;
   border-color: transparent;
   background-color: #FBFCFE;
-  text-align: center;
   font-size: 0.875rem;
   margin-bottom: 10px;
-  padding: 5px; }
+  padding: 5px;
+  text-align: center; }
   .row:after {
     content: "";
     display: table;
@@ -129,8 +157,8 @@ body {
         display: table;
         clear: both; }
       .row.active .col:nth-child(5) .content h3 {
-        float: left;
-        margin: 0; }
+        margin: 0;
+        text-align: left; }
   .row.active .col:nth-child(6) {
     width: 16.66667%;
     float: left;
@@ -146,8 +174,8 @@ body {
         display: table;
         clear: both; }
       .row.active .col:nth-child(6) .content h3 {
-        float: left;
-        margin: 0; }
+        margin: 0;
+        text-align: left; }
   .row.active .col:nth-child(7) {
     width: 16.66667%;
     float: left;
@@ -163,8 +191,8 @@ body {
         display: table;
         clear: both; }
       .row.active .col:nth-child(7) .content h3 {
-        float: left;
-        margin: 0; }
+        margin: 0;
+        text-align: left; }
   .row.active .col:nth-child(8) {
     width: 16.66667%;
     float: left;
@@ -180,8 +208,8 @@ body {
         display: table;
         clear: both; }
       .row.active .col:nth-child(8) .content h3 {
-        float: left;
-        margin: 0; }
+        margin: 0;
+        text-align: left; }
   .row.active .col:nth-child(9) {
     width: 16.66667%;
     float: left;
@@ -197,8 +225,8 @@ body {
         display: table;
         clear: both; }
       .row.active .col:nth-child(9) .content h3 {
-        float: left;
-        margin: 0; }
+        margin: 0;
+        text-align: left; }
   .row.active .col:nth-child(9) {
     display: block;
     margin: 0; }

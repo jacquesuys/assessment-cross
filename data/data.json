@@ -1,8 +1,38 @@
 [
   {
-    "type": "Firewall",
+    "type": "Build",
     "name": "Tenrox-R1_1235",
     "owner": "",
+    "date": "",
+    "time": "",
+    "state": "Pending",
+    "metrics": {
+      "test": 64,
+      "maintainability": 53,
+      "security": 64,
+      "workmanship": 72
+    },
+    "build": {
+      "date": "4/17/2014",
+      "time": "10:46am"
+    },
+    "unit test": {
+      "success": 142,
+      "failure": 10,
+      "pass": 73,
+      "covered": 76 
+    },
+    "functional test": {
+      "success": 4321,
+      "failure": 2145,
+      "pass": 68,
+      "covered": 23
+    }
+  },
+  {
+    "type": "Firewall",
+    "name": "4322462",
+    "owner": "jtuck",
     "date": "4/18/2014",
     "time": "12:12pm",
     "state": "Running",
@@ -31,11 +61,41 @@
   },
   {
     "type": "Firewall",
-    "name": "Tenrox-R1_1235",
+    "name": "432461",
+    "owner": "samy",
+    "date": "4/18/2014",
+    "time": "12:12pm",
+    "state": "Rejected",
+    "metrics": {
+      "test": 64,
+      "maintainability": 53,
+      "security": 64,
+      "workmanship": 72
+    },
+    "build": {
+      "date": "4/17/2014",
+      "time": "10:46am"
+    },
+    "unit test": {
+      "success": 142,
+      "failure": 10,
+      "pass": 73,
+      "covered": 76 
+    },
+    "functional test": {
+      "success": 4321,
+      "failure": 2145,
+      "pass": 68,
+      "covered": 23
+    }
+  },
+  {
+    "type": "Build",
+    "name": "Tenrox-R1_1234",
     "owner": "",
     "date": "4/18/2014",
     "time": "12:12pm",
-    "state": "Running",
+    "state": "Complete",
     "metrics": {
       "test": 64,
       "maintainability": 53,
@@ -61,11 +121,11 @@
   },
   {
     "type": "Firewall",
-    "name": "Tenrox-R1_1235",
-    "owner": "",
-    "date": "4/18/2014",
+    "name": "432460",
+    "owner": "samy",
+    "date": "4/17/2014",
     "time": "12:12pm",
-    "state": "Running",
+    "state": "Rejected",
     "metrics": {
       "test": 64,
       "maintainability": 53,
@@ -91,71 +151,11 @@
   },
   {
     "type": "Firewall",
-    "name": "Tenrox-R1_1235",
-    "owner": "",
-    "date": "4/18/2014",
+    "name": "432459",
+    "owner": "samy",
+    "date": "4/16/2014",
     "time": "12:12pm",
-    "state": "Running",
-    "metrics": {
-      "test": 64,
-      "maintainability": 53,
-      "security": 64,
-      "workmanship": 72
-    },
-    "build": {
-      "date": "4/17/2014",
-      "time": "10:46am"
-    },
-    "unit test": {
-      "success": 142,
-      "failure": 10,
-      "pass": 73,
-      "covered": 76 
-    },
-    "functional test": {
-      "success": 4321,
-      "failure": 2145,
-      "pass": 68,
-      "covered": 23
-    }
-  },
-  {
-    "type": "Firewall",
-    "name": "Tenrox-R1_1235",
-    "owner": "",
-    "date": "4/18/2014",
-    "time": "12:12pm",
-    "state": "Running",
-    "metrics": {
-      "test": 64,
-      "maintainability": 53,
-      "security": 64,
-      "workmanship": 72
-    },
-    "build": {
-      "date": "4/17/2014",
-      "time": "10:46am"
-    },
-    "unit test": {
-      "success": 142,
-      "failure": 10,
-      "pass": 73,
-      "covered": 76 
-    },
-    "functional test": {
-      "success": 4321,
-      "failure": 2145,
-      "pass": 68,
-      "covered": 23
-    }
-  },
-  {
-    "type": "Firewall",
-    "name": "Tenrox-R1_1235",
-    "owner": "",
-    "date": "4/18/2014",
-    "time": "12:12pm",
-    "state": "Running",
+    "state": "Accepted",
     "metrics": {
       "test": 64,
       "maintainability": 53,

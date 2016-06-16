@@ -70,6 +70,7 @@ body {
     @include span(1 of 8);
     white-space: nowrap;
     overflow: hidden;
+    line-height: 1.25rem;
 
     // TODO add nth-child selectors might change 
     // to classes dep browser requirements
@@ -113,6 +114,8 @@ body {
       @for $i from 5 through 9 {
         &:nth-child(#{$i}) {
           @include span(1 of 5);
+          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+          background-color: transparent;
 
           .bar {
             display: none;
@@ -120,6 +123,12 @@ body {
 
           .content {
             display: block;
+            @include clearfix;
+
+            h3 {
+              float: left;
+              margin: 0;
+            }
           }
         }
       }
@@ -138,7 +147,7 @@ body {
 }
 
 .running {
-  @include status($blue, lighten($blue, 50%));
+  @include status($blue, lighten($blue, 35%));
 
   .content,
   .bar {
@@ -147,7 +156,7 @@ body {
 }
 
 .rejected {
-  @include status($red, lighten($red, 50%));
+  @include status($red, lighten($red, 60%));
 
   .content,
   .bar {
@@ -165,7 +174,7 @@ body {
 }
 
 // progress bars
-// make this BEM
+// make this BEM, move to bar class
 .run {
   background-color: $blue;
   // will need transitions

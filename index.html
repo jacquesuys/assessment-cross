@@ -7,7 +7,7 @@
   </head>
   <body ng-app="crossApp">
     <div class="container" ng-controller="MainCtrl">
-      {{data}}
+      {{tests}}
       <div class="row">
         <div class="heading">Changelist / Build</div>
         <div class="heading">Owner</div>
@@ -19,187 +19,48 @@
         <div class="heading">Functional Test</div>
       </div>
 
-      <div class="row pending">
-        <div class="col">icon</div>
-        <div class="col">jtuck</div>
-        <div class="col">4/18/2014 12:12pm</div>
-        <div class="col">Running</div>
+      <div ng-repeat="test in tests" class="row active {{ test.state | lowercase }}">
+        <div class="col">{{ test.name }}</div>
+        <div class="col">{{ test.owner }}</div>
+        <div class="col">{{ test.date }} {{ test.time }}</div>
+        <div class="col">{{ test.state }}</div>
         <div class="col">
           <div class="bar"></div>
           <div class="content">
-            bar
+            <h3>Metrics</h3>
+            Test {{ test.metrics.test }}
+            Maintainability {{ test.metrics.maintainability }}
+            Security {{ test.metrics.security }}
+            Workmanship {{ test.metrics.workmanship }}
           </div>
         </div>
         <div class="col">
           <div class="bar"></div>
           <div class="content">
-            bar
+            <h3>Build</h3>
+            {{ test.build.time }} {{ test.build.date }}
           </div>
         </div>
         <div class="col">
           <div class="bar"></div>
           <div class="content">
-            bar
+            <h3>Unit Test</h3>
+            {{ test["unit test"].success }} {{ test["unit test"].failure }} {{ test["unit test"].pass }} {{ test["unit test"].covered }}
           </div>
         </div>
         <div class="col">
           <div class="bar"></div>
           <div class="content">
-            bar
+            <h3>Functional Test</h3>
+            {{ test["functional test"].success }} {{ test["functional test"].failure }} {{ test["functional test"].pass }} {{ test["functional test"].covered }}
           </div>
         </div>
         <div class="col">
-          <div class="bar"></div>
           <div class="content">
-            result
-          </div>
-        </div>
-      </div>
-
-      <div class="row running">
-        <div class="col">icon</div>
-        <div class="col">jtuck</div>
-        <div class="col">4/18/2014 12:12pm</div>
-        <div class="col">Running</div>
-        <div class="col">
-          <div class="bar"></div>
-          <div class="content">
-            <h3>bar</h3>
-          </div>
-        </div>
-        <div class="col">
-          <div class="bar"></div>
-          <div class="content">
-            <h3>bar</h3>
-          </div>
-        </div>
-        <div class="col">
-          <div class="bar"></div>
-          <div class="content">
-            <h3>bar</h3>
-          </div>
-        </div>
-        <div class="col">
-          <div class="bar"></div>
-          <div class="content">
-            <h3>bar</h3>
-          </div>
-        </div>
-        <div class="col">
-          <div class="bar"></div>
-          <div class="content">
-            <h3>result</h3>
-          </div>
-        </div>
-      </div>
-
-      <div class="row rejected">
-        <div class="col">icon</div>
-        <div class="col">jtuck</div>
-        <div class="col">4/18/2014 12:12pm</div>
-        <div class="col">Running</div>
-        <div class="col">
-          <div class="bar"></div>
-          <div class="content">
-            <h3>bar</h3>
-          </div>
-        </div>
-        <div class="col">
-          <div class="bar"></div>
-          <div class="content">
-            <h3>bar</h3>
-          </div>
-        </div>
-        <div class="col">
-          <div class="bar"></div>
-          <div class="content">
-            <h3>bar</h3>
-          </div>
-        </div>
-        <div class="col">
-          <div class="bar"></div>
-          <div class="content">
-            <h3>bar</h3>
-          </div>
-        </div>
-        <div class="col">
-          <div class="bar"></div>
-          <div class="content">
-            <h3>result</h3>
-          </div>
-        </div>
-      </div>
-
-      <div class="row active accepted">
-        <div class="col">icon</div>
-        <div class="col">jtuck</div>
-        <div class="col">4/18/2014 12:12pm</div>
-        <div class="col">Running</div>
-        <div class="col">
-          <div class="bar"></div>
-          <div class="content">
-            <h3>bar</h3>
-          </div>
-        </div>
-        <div class="col">
-          <div class="bar"></div>
-          <div class="content">
-            <h3>bar</h3>
-          </div>
-        </div>
-        <div class="col">
-          <div class="bar"></div>
-          <div class="content">
-            <h3>bar</h3>
-          </div>
-        </div>
-        <div class="col">
-          <div class="bar"></div>
-          <div class="content">
-            <h3>bar</h3>
-          </div>
-        </div>
-        <div class="col">
-          <div class="bar"></div>
-          <div class="content">
-            <h3>result</h3>
-          </div>
-        </div>
-      </div>
-
-      <div class="row accepted">
-        <div class="col">icon</div>
-        <div class="col">jtuck</div>
-        <div class="col">4/18/2014 12:12pm</div>
-        <div class="col">Running</div>
-        <div class="col">
-          <div class="bar"></div>
-          <div class="content">
-            <h3>bar</h3>
-          </div>
-        </div>
-        <div class="col">
-          <div class="bar"></div>
-          <div class="content">
-            <h3>bar</h3>
-          </div>
-        </div>
-        <div class="col">
-          <div class="bar"></div>
-          <div class="content">
-            <h3>bar</h3>
-          </div>
-        </div>
-        <div class="col">
-          <div class="bar"></div>
-          <div class="content">
-            <h3>bar</h3>
-          </div>
-        </div>
-        <div class="col">
-          <div class="bar"></div>
-          <div class="content">
-            <h3>result</h3>
+            <h4>Result:</h4>
+            <h5>Change Accepted</h5>
+            <h2>Auto-Merged</h2>
+            <button>Merge Build</button>
           </div>
         </div>
       </div>

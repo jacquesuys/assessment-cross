@@ -6,6 +6,6 @@ angular.module('crossApp', [])
       method: 'GET',
       url: 'data/data.json'
     }).then(function(resp) {
-      $scope.data = resp.data;
+      $scope.tests = resp.data;
     });
   });

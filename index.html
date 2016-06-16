@@ -28,10 +28,10 @@
           <div class="bar {{ test.metrics.status }}"></div>
           <div class="content">
             <h3>Metrics</h3>
-              <div class="half">Test {{ test.metrics.test }}</div>
-              <div class="half">Maintainability {{ test.metrics.maintainability }}</div>
-              <div class="half">Security {{ test.metrics.security }}</div>
-              <div class="half">Workmanship {{ test.metrics.workmanship }}</div>
+              <div class="half">{{ test.metrics.test }}<br/>Test</div>
+              <div class="half">{{ test.metrics.maintainability }}<br/>Maintainability</div>
+              <div class="half">{{ test.metrics.security }}<br/>Security</div>
+              <div class="half">{{ test.metrics.workmanship }}<br/>Workmanship</div>
           </div>
         </div>
         <div class="col">
@@ -47,9 +47,9 @@
           <div class="bar {{ test['unit test'].status }}"></div>
           <div class="content">
             <h3>Unit Test</h3>
-            <!-- TODO possibly use a custom canvas drawing for the charts -->
+            <!-- TODO possibly use a custom SVGs drawing for the charts -->
             <div class="half">{{ test["unit test"].success }} {{ test["unit test"].failure }}</div> 
-            <div class="half">{{ test["unit test"].pass }}</div>
+            <div class="half">{{ test["unit test"].pass }}%<br/>test passed</div>
             <div class="full coverage">
               <span>{{ test["unit test"].covered }}% <br/> code covered</span>
               <div class="progress" style="width: {{ test['unit test'].covered }}%"></div>
@@ -60,9 +60,9 @@
           <div class="bar {{ test['functional test'].status }}"></div>
           <div class="content">
             <h3>Functional Test</h3>
-            <!-- TODO possibly use a custom canvas drawing for the charts -->
+            <!-- TODO possibly use a custom SVGs drawing for the charts -->
             <div class="half">{{ test["functional test"].success }} {{ test["functional test"].failure }}</div>
-            <div class="half">{{ test["functional test"].pass }}</div>
+            <div class="half">{{ test["functional test"].pass }}%<br/>test passed</div>
             <div class="full coverage">
               <span>{{ test["functional test"].covered }}% <br/> code covered</span>
               <div class="progress" style="width: {{ test['functional test'].covered }}%"></div>
@@ -72,6 +72,12 @@
         <div class="col">
           <div class="content">
             <h4>Result:</h4>
+            <div ng-if="test.state === 'Pending' ">
+              <h2>Pending</h2>
+            </div>
+            <div ng-if="test.state === 'Running' ">
+              <h2>Running</h2>
+            </div>
             <div ng-if="test.state === 'Accepted' ">
               <h5>Change Accepted</h5>
               <h2>Auto-Merged</h2>

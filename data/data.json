@@ -7,22 +7,26 @@
     "time": "",
     "state": "Pending",
     "metrics": {
+      "status": "",
       "test": 64,
       "maintainability": 53,
       "security": 64,
       "workmanship": 72
     },
     "build": {
+      "status": "",
       "date": "4/17/2014",
       "time": "10:46am"
     },
     "unit test": {
+      "status": "",
       "success": 142,
       "failure": 10,
       "pass": 73,
       "covered": 76 
     },
     "functional test": {
+      "status": "",
       "success": 4321,
       "failure": 2145,
       "pass": 68,
@@ -37,22 +41,26 @@
     "time": "12:12pm",
     "state": "Running",
     "metrics": {
+      "status": "",
       "test": 64,
       "maintainability": 53,
       "security": 64,
       "workmanship": 72
     },
     "build": {
+      "status": "",
       "date": "4/17/2014",
       "time": "10:46am"
     },
     "unit test": {
+      "status": "",
       "success": 142,
       "failure": 10,
       "pass": 73,
       "covered": 76 
     },
     "functional test": {
+      "status": "",
       "success": 4321,
       "failure": 2145,
       "pass": 68,
@@ -67,22 +75,26 @@
     "time": "12:12pm",
     "state": "Rejected",
     "metrics": {
+      "status": "fail",
       "test": 64,
       "maintainability": 53,
       "security": 64,
       "workmanship": 72
     },
     "build": {
+      "status": "pass",
       "date": "4/17/2014",
       "time": "10:46am"
     },
     "unit test": {
+      "status": "pass",
       "success": 142,
       "failure": 10,
       "pass": 73,
       "covered": 76 
     },
     "functional test": {
+      "status": "pass",
       "success": 4321,
       "failure": 2145,
       "pass": 68,
@@ -97,22 +109,26 @@
     "time": "12:12pm",
     "state": "Complete",
     "metrics": {
+      "status": "pass",
       "test": 64,
       "maintainability": 53,
       "security": 64,
       "workmanship": 72
     },
     "build": {
+      "status": "pass",
       "date": "4/17/2014",
       "time": "10:46am"
     },
     "unit test": {
+      "status": "pass",
       "success": 142,
       "failure": 10,
       "pass": 73,
       "covered": 76 
     },
     "functional test": {
+      "status": "pass",
       "success": 4321,
       "failure": 2145,
       "pass": 68,
@@ -127,22 +143,26 @@
     "time": "12:12pm",
     "state": "Rejected",
     "metrics": {
+      "status": "fail",
       "test": 64,
       "maintainability": 53,
       "security": 64,
       "workmanship": 72
     },
     "build": {
+      "status": "",
       "date": "4/17/2014",
       "time": "10:46am"
     },
     "unit test": {
+      "status": "",
       "success": 142,
       "failure": 10,
       "pass": 73,
       "covered": 76 
     },
     "functional test": {
+      "status": "",
       "success": 4321,
       "failure": 2145,
       "pass": 68,
@@ -157,22 +177,26 @@
     "time": "12:12pm",
     "state": "Accepted",
     "metrics": {
+      "status": "pass",
       "test": 64,
       "maintainability": 53,
       "security": 64,
       "workmanship": 72
     },
     "build": {
+      "status": "pass",
       "date": "4/17/2014",
       "time": "10:46am"
     },
     "unit test": {
+      "status": "pass",
       "success": 142,
       "failure": 10,
       "pass": 73,
       "covered": 76 
     },
     "functional test": {
+      "status": "pass",
       "success": 4321,
       "failure": 2145,
       "pass": 68,

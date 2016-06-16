@@ -18,13 +18,14 @@
         <div class="heading">Functional Test</div>
       </div>
 
-      <div ng-repeat="test in tests" class="row active {{ test.state | lowercase }}">
-        <div class="col">{{ test.name }}</div>
-        <div class="col">{{ test.owner }}</div>
-        <div class="col">{{ test.date }} {{ test.time }}</div>
-        <div class="col">{{ test.state }}</div>
+      <div ng-repeat="test in tests" class="row {{ test.state | lowercase }}">
+        <div class="col">{{ test.name ||  "&nbsp;" }}</div>
+        <div class="col">{{ test.owner || "&nbsp;" }}</div>
+        <div class="col">{{ test.date }} {{ test.time || "&nbsp;" }}</div>
+        <div class="col">{{ test.state ||  "&nbsp;" }}</div>
+        <!-- TODO maybe make these 4 into directives -->
         <div class="col">
-          <div class="bar"></div>
+          <div class="bar {{ test.metrics.status }}"></div>
           <div class="content">
             <h3>Metrics</h3>
             Test {{ test.metrics.test }}
@@ -34,21 +35,21 @@
           </div>
         </div>
         <div class="col">
-          <div class="bar"></div>
+          <div class="bar {{ test.build.status }}"></div>
           <div class="content">
             <h3>Build</h3>
             {{ test.build.time }} {{ test.build.date }}
           </div>
         </div>
         <div class="col">
-          <div class="bar"></div>
+          <div class="bar {{ test['unit test'].status }}"></div>
           <div class="content">
             <h3>Unit Test</h3>
             {{ test["unit test"].success }} {{ test["unit test"].failure }} {{ test["unit test"].pass }} {{ test["unit test"].covered }}
           </div>
         </div>
         <div class="col">
-          <div class="bar"></div>
+          <div class="bar {{ test['functional test'].status }}"></div>
           <div class="content">
             <h3>Functional Test</h3>
             {{ test["functional test"].success }} {{ test["functional test"].failure }} {{ test["functional test"].pass }} {{ test["functional test"].covered }}

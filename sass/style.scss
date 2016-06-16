@@ -69,11 +69,9 @@ body {
   .col {
     @include span(1 of 8);
     white-space: nowrap;
-    overflow: hidden;
+    // overflow: hidden;
     line-height: 1.25rem;
 
-    // TODO add nth-child selectors might change 
-    // to classes dep browser requirements
     @for $i from 5 through 9 {
       &:nth-child(#{$i}) {
         border: solid 1px #CACBCB;
@@ -175,7 +173,7 @@ body {
 }
 
 // progress bars
-// make this BEM, move to bar class
+// TODO make this BEM, move to bar class
 .run {
   background-color: $blue;
   // will need transitions

@@ -42,7 +42,6 @@ body {
     float: left;
     margin-right: 2.5641%;
     white-space: nowrap;
-    overflow: hidden;
     line-height: 1.25rem; }
     .row .col:nth-child(5) {
       border: solid 1px #CACBCB;

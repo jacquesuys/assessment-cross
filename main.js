@@ -2,7 +2,7 @@
 
 angular.module('crossApp', [])
   .controller('MainCtrl', function ($scope, $http) {
-    // needs to be a service
+    // TODO needs to be a service
     $http({
       method: 'GET',
       url: 'data/data.json'
@@ -10,6 +10,7 @@ angular.module('crossApp', [])
       $scope.tests = resp.data;
     });
 
+    // TODO setup a directive
     $scope.isOpen = '';
 
     $scope.toggle = function($index) {

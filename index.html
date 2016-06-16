@@ -28,39 +28,67 @@
           <div class="bar {{ test.metrics.status }}"></div>
           <div class="content">
             <h3>Metrics</h3>
-            Test {{ test.metrics.test }}
-            Maintainability {{ test.metrics.maintainability }}
-            Security {{ test.metrics.security }}
-            Workmanship {{ test.metrics.workmanship }}
+              <div class="half">Test {{ test.metrics.test }}</div>
+              <div class="half">Maintainability {{ test.metrics.maintainability }}</div>
+              <div class="half">Security {{ test.metrics.security }}</div>
+              <div class="half">Workmanship {{ test.metrics.workmanship }}</div>
           </div>
         </div>
         <div class="col">
           <div class="bar {{ test.build.status }}"></div>
           <div class="content">
             <h3>Build</h3>
-            {{ test.build.time }} {{ test.build.date }}
+            <div class="half">icon <br/> <h4>Debug</h4></div>
+            <div class="half">icon <br/> <h4>Release</h4></div>
+            <div class="full">{{ test.build.time }} - {{ test.build.date }}</div>
           </div>
         </div>
         <div class="col">
           <div class="bar {{ test['unit test'].status }}"></div>
           <div class="content">
             <h3>Unit Test</h3>
-            {{ test["unit test"].success }} {{ test["unit test"].failure }} {{ test["unit test"].pass }} {{ test["unit test"].covered }}
+            <!-- TODO possibly use a custom canvas drawing for the charts -->
+            <div class="half">{{ test["unit test"].success }} {{ test["unit test"].failure }}</div> 
+            <div class="half">{{ test["unit test"].pass }}</div>
+            <div class="full coverage">
+              <span>{{ test["unit test"].covered }}% <br/> code covered</span>
+              <div class="progress" style="width: {{ test['unit test'].covered }}%"></div>
+            </div>
           </div>
         </div>
         <div class="col">
           <div class="bar {{ test['functional test'].status }}"></div>
           <div class="content">
             <h3>Functional Test</h3>
-            {{ test["functional test"].success }} {{ test["functional test"].failure }} {{ test["functional test"].pass }} {{ test["functional test"].covered }}
+            <!-- TODO possibly use a custom canvas drawing for the charts -->
+            <div class="half">{{ test["functional test"].success }} {{ test["functional test"].failure }}</div>
+            <div class="half">{{ test["functional test"].pass }}</div>
+            <div class="full coverage">
+              <span>{{ test["functional test"].covered }}% <br/> code covered</span>
+              <div class="progress" style="width: {{ test['functional test'].covered }}%"></div>
+            </div>
           </div>
         </div>
         <div class="col">
           <div class="content">
             <h4>Result:</h4>
-            <h5>Change Accepted</h5>
-            <h2>Auto-Merged</h2>
-            <button>Merge Build</button>
+            <div ng-if="test.state === 'Accepted' ">
+              <h5>Change Accepted</h5>
+              <h2>Auto-Merged</h2>
+              <button>Merge Build</button>
+            </div>
+            <div ng-if="test.state === 'Rejected' ">
+              <h5>Change Rejected</h5>
+              <h2>Metrics Reduction</h2>
+              <button>Find Issues</button>
+            </div>
+            <div ng-if="test.state === 'Complete' ">
+              <h5>Complete</h5>
+              <button>Deploy</button> to <select>
+                <option>Production</option>
+                <option>Development</option>
+              </select>
+            </div>
           </div>
         </div>
       </div>
